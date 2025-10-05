@@ -117,7 +117,6 @@ class LlavaOneVisionBenchmarkEvaluator:
             if text_part.strip():  # Add non-empty text parts
                 content.append({"type": "text", "text": text_part.strip()})
             
-            # Add image placeholder if we have one and it's not the last text part
             if i < len(images):
                 content.append({"type": "image"})
         
@@ -148,7 +147,6 @@ class LlavaOneVisionBenchmarkEvaluator:
             return matches[0].upper()
         
         # Look for single capital letters A, B, C, or D
-        # Try different patterns to be robust
         patterns = [
             r'\b([ABCDYN])\b',  # Single letter surrounded by word boundaries
             r'answer[:\s]+([ABCDYN])',  # "answer: A" or "answer A"

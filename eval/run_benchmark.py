@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# run_benchmark.py - Benchmark runner with CLI arguments
-
 import argparse
 import os
 import sys

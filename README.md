@@ -75,7 +75,7 @@ pip install lmdeploy
 ## 📊 Running Evaluations
 
 ### 🤗 Download the dataset
-To download the data from the [🤗 Dataset](https://huggingface.co/datasets/YuyouZhang/SpinBench).
+Download the data from [🤗 Dataset](https://huggingface.co/datasets/YuyouZhang/SpinBench).
 
 <details>
 <summary><strong>Click to expand folder structure</strong></summary>
@@ -101,7 +101,7 @@ SpinBench/
 
 </details>
 
-### Evaluate proprietary models(GPT and Claude)
+### Evaluate proprietary models
 
 To evaluate proprietary models like GPT and Claude, run:
 
@@ -133,8 +133,12 @@ Or list models
 ```bash
 python eval/submit_benchmark.py --list-models
 ```
-"submit_benchmark.py" will use the configurations defined in `model_config.py`.
+"submit_benchmark.py" will use the configurations defined in :
 
+```
+eval/model_config.py
+```
+Update this file to add or modify model settings for evaluation.
 
 For other models, run
 ```bash
@@ -144,17 +148,16 @@ python eval/run_spaceom.py --test_file "data/test.jsonl" --output_dir "./results
 
 ```
 
----
+## Citation
 
-## ⚙️ Model configuration
-
-All model configs are listed in:
-
+**BibTeX:**
+```bibtex
+@article{zhang2025spinbench,
+  title={SpinBench: Perspective and Rotation as a Lens on Spatial Reasoning in VLMs},
+  author={Zhang, Yuyou and Corcodel, Radu and Hori, Chiori and Cherian, Anoop and Zhao, Ding},
+  journal={arXiv preprint arXiv:2509.25390},
+  year={2025}
+}
 ```
-eval/model_config.py
-```
-
-Update this file to add or modify model settings for evaluation.
-
 
 

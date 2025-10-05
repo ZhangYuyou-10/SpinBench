@@ -133,7 +133,6 @@ class SpaceOmBenchmarkEvaluator:
             if text_part.strip():  # Add non-empty text parts
                 chat_content.append({"type": "text", "text": text_part.strip()})
             
-            # Add image if we have one and it's not the last text part
             if i < len(images):
                 chat_content.append({"type": "image", "image": images[i]})
         

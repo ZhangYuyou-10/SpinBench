@@ -25,7 +25,7 @@ class CosmosBenchmarkEvaluator:
         self.model_name = model_path.split('/')[-1]  # Extract model name from path
         self.use_system_prompt = use_system_prompt
         
-        # System message for structured reasoning
+        # System prompt
         self.system_message = (
             "You are a helpful assistant. Answer the question in the following format: "
             "<think>\nyour reasoning\n</think>\n\n<answer>\nyour answer\n</answer>."
@@ -129,7 +129,6 @@ class CosmosBenchmarkEvaluator:
             if text_part.strip():  # Add non-empty text parts
                 content.append({"type": "text", "text": text_part.strip()})
             
-            # Add image if we have one and it's not the last text part
             if i < len(image_full_paths):
                 content.append({"type": "image", "image": image_full_paths[i]})
         

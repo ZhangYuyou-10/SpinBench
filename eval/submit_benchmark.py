@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # submit_benchmark.py - Convenient wrapper to submit benchmark jobs
 
 # List all VLM models 
